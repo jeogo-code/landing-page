@@ -31,7 +31,7 @@ function Component() {
     return () => clearInterval(timer);
   }, []);
 
-  const formatTime = (time) => {
+  const formatTime = (time: number) => {
     const minutes = Math.floor(time / 60);
     const seconds = time % 60;
     return `${minutes.toString().padStart(2, "0")}:${seconds
@@ -39,22 +39,22 @@ function Component() {
       .padStart(2, "0")}`;
   };
 
-  const handleWilayaChange = (e) => {
+  const handleWilayaChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setSelectedWilaya(e.target.value);
     setSelectedBaladiya("");
   };
 
-  const handleBaladiyaChange = (e) => {
+  const handleBaladiyaChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setSelectedBaladiya(e.target.value);
   };
 
-  const handleQuantityChange = (e) => {
+  const handleQuantityChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const newQuantity = parseInt(e.target.value);
     setQuantity(newQuantity);
     setTotalPrice(5990 * newQuantity);
   };
 
-  const scrollToSection = (id) => {
+  const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
@@ -62,7 +62,7 @@ function Component() {
     setIsMenuOpen(false);
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
     const orderData = {
@@ -362,11 +362,11 @@ function Component() {
                       className="w-full text-lg py-3 px-4 border border-green-500 rounded-lg focus:ring-2 focus:ring-green-300 focus:border-green-500"
                       disabled={!selectedWilaya}
                     >
-                      <option value="">اختر البلدية</option>{" "}
+                      <option value="">اختر البلدية</option>
                       {selectedWilaya &&
                         wilayas
-                          .find((wilaya) => wilaya.name === selectedWilaya)
-                          .baladiyas.map((baladiya, index) => (
+                          ?.find((wilaya) => wilaya?.name === selectedWilaya)
+                          ?.baladiyas.map((baladiya, index) => (
                             <option key={index} value={baladiya}>
                               {baladiya}
                             </option>
