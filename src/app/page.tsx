@@ -396,13 +396,13 @@ function Component() {
                     <div className="flex items-center bg-gray-50 p-4 rounded-lg shadow-md border border-gray-200">
                       <div className="flex items-center space-x-2 rtl:space-x-reverse">
                         <span className="text-red-500 line-through text-xl font-semibold">
-                          {(7000 * quantity).toLocaleString()} د.ج
+                          {(4500 * quantity).toLocaleString()} د.ج
                         </span>
                         <span className="text-gray-400 text-xl font-bold">
                           /
                         </span>
                         <span className="text-green-600 text-2xl font-extrabold">
-                          {(5800 * quantity).toLocaleString()} د.ج
+                          {(2999 * quantity).toLocaleString()} د.ج
                         </span>
                       </div>
                     </div>
