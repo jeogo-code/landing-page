@@ -18,7 +18,7 @@ function Component() {
   const [selectedWilaya, setSelectedWilaya] = useState("");
   const [selectedBaladiya, setSelectedBaladiya] = useState("");
   const [quantity, setQuantity] = useState(1);
-  const [totalPrice, setTotalPrice] = useState(4999);
+  const [totalPrice, setTotalPrice] = useState(2999);
   const [showCountdown, setShowCountdown] = useState(true);
   const [timeLeft, setTimeLeft] = useState(3600); // 1 hour in seconds
   const [showSuccessModal, setShowSuccessModal] = useState(false);
@@ -282,7 +282,7 @@ function Component() {
                 اطلب حزمتك الآن
               </h2>
               <div className="text-2xl font-semibold text-center mb-8 text-orange-500">
-                عرض خاص: 5800 د.ج فقط
+                عرض خاص 2999 د.ج فقط
               </div>
               <form className="space-y-8" onSubmit={handleSubmit}>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
